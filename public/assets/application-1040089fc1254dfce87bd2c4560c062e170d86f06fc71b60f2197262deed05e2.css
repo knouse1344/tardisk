@@ -1,3 +1,12 @@
+/* line 7, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index {
+  width: 100%;
+}
+/* line 10, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .mock {
+  width: 100%;
+  display: block;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,6 +19,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+/* line 20, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/application.scss */
+html, html body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
