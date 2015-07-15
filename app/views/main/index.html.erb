@@ -1,3 +1,64 @@
+<header id="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<img class="logo" src="/assets/logo.png" />
+				<ul class="navlist">
+					<li><a href="#">Compatible</a></li>
+					<li><a href="#">Storage</a></li>
+					<li><a href="#">Design</a></li>
+					<li><a href="#">Products</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
 <div id="index">
-	<img class="mock" src="/assets/tardisk_mockup_v1.jpg" />
+	<div class="banner">
+		<h1>Simple. Secure. Storage.</h1>
+		<p>Goes where you go.  Needed when you need it.  Double your storage.</p>
+		<button class="buynow">Buy Now</button>
+		<h5>See More<br><span class="glyphicon glyphicon-chevron-down"></span></h5>
+	</div>
+	<div class="compatible container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="compatible-slider">
+					<div><img src="/assets/macbook.jpg" /></div>
+					<div><img src="/assets/macbook.jpg" /></div>
+					<div><img src="/assets/macbook.jpg" /></div>
+					<div><img src="/assets/macbook.jpg" /></div>
+					<div><img src="/assets/macbook.jpg" /></div>
+					<div><img src="/assets/macbook.jpg" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2>Compatible with All Macbooks</h2>
+				<p>TarDisk has something for nearly every MacBook model out there. From the impossibly small 16MM long TarDisk R13A to the 22mm long TarDisk R15A, all cards are designed to fit your MacBook seamlessly and match your Mac's finish.</p>
+				<a class="viewmore" href="#">View More <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
 </div>
+
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		var slider = $(".compatible-slider")
+
+		slider.slick({
+			centerMode: true,
+			centerPadding: '0px',
+			slidesToShow: 3,
+			arrows: false
+		});
+
+
+	});
+</script>

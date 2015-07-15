@@ -4,11 +4,262 @@
 
 
 
+header#header {
+	background: #fff;
+}
+
+#header .logo {
+	height: 5em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+#header .navlist {
+	font-family: 'Noto Sans', sans-serif;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	height: 5em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+#header .navlist li {
+	display: inline-block;
+}
+#header .navlist li a {
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0 1em;
+	display: inline-block;
+	line-height: 5em;
+	height: 5em;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+#header .navlist li a:hover {
+	opacity: .6;
+}
 #index {
 	width: 100%;
+}
+#index .banner {
+	display: block;
+	width: 100%;
+	background: url('/assets/banner_02.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+#index .banner h1 {
+	color: #fff;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.25em;
+}
+#index .banner h5 {
+	color: #fff;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	line-height: 2em;
+	font-size: 1.5em;
+}
+#index .banner p {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 400;
+	font-family: 'Noto Sans', sans-serif;
+}
+#index .banner .buynow {
+	font-size: 1.5em;
+	padding: .5em 1.5em;
+	color: #fff;
+	background: orange;
+	border-radius: .3em;
+	margin-top: 15em;
+	margin-bottom: 1em;
+	outline: 0;
+	border: 0;
+}
 
-	.mock {
-		width: 100%;
-		display: block;
-	}
+#index .compatible-slider {
+	min-height: 30em;
+	padding-top: 5em;
+}
+#index .compatible-slider .slick-slide {
+
+}
+#index .compatible-slider .slick-slide:focus {
+	outline: 0;
+}
+#index .compatible-slider img {
+	padding: 5em 0;
+	width: 60%;
+	margin: auto;
+	opacity: .35;
+	transition: all .2s;
+	-ms-transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+}
+#index .compatible-slider .slick-center img {
+  opacity: 1;
+  width: 100%;
+  padding-top: 1em;
+}
+#index .compatible {
+
+}
+#index .compatible h2 {
+	color: #000;
+	font-size: 2.75em;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: .5em;
+	font-family: 'Nota Sans', sans-serif;
+}
+#index .compatible p {
+	color: #666;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+	line-height: 1.75em;
+	font-family: 'Nota Sans', sans-serif;
+	text-align: center;
+}
+#index .compatible .viewmore {
+	display: block;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 1.5em 0;
+}
+#index .mock {
+	width: 100%;
+	display: block;
+}
+
+
+
+
+
+/*    Slick Slider Stuffs     */
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
 }
