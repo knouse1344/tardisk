@@ -42,6 +42,12 @@
 					<div class="third"><img src="/assets/mbp13.png" /></div>
 					<div class="fourth"><img src="/assets/mbpcd.png" /></div>
 				</div>
+				<div class="compatible-name">
+					<h1 class="active">13" Macbook Air</h1>
+					<h1 class="second">15" Macbook Pro</h1>
+					<h1 class="third">13" Macbook Pro</h1>
+					<h1 class="fourth">Macbook Pro with CD Drive</h1>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -193,6 +199,12 @@
 			$(".compatible-slider .third").removeClass("third").addClass("second")
 			$(".compatible-slider .fourth").removeClass("fourth").addClass("third")
 			$(".compatible-slider .transition").removeClass("transition active").addClass("fourth")
+
+			$(".compatible-name .active").addClass("transition")
+			$(".compatible-name .second").removeClass("second").addClass("active")
+			$(".compatible-name .third").removeClass("third").addClass("second")
+			$(".compatible-name .fourth").removeClass("fourth").addClass("third")
+			$(".compatible-name .transition").removeClass("transition active").addClass("fourth")
 		});
 
 		// slider.slick({

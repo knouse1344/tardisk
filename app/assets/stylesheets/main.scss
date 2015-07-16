@@ -199,6 +199,36 @@ header#header {
 	z-index: 200;
 	top: 2em;
 }
+#index .compatible-name {
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 4em;
+	margin-bottom: 1em;
+}
+#index .compatible-name h1 {
+	display: block;
+	width: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
+	text-align: center;
+	position: absolute;
+	opacity: 0;
+	transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+}
+#index .compatible-name h1.active {
+	display: block;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	position: absolute;
+	opacity: 1;
+}
 #index .compatible-slider .slick-slide {
 
 }
