@@ -400,15 +400,93 @@ header#header {
 #index .seamless img {
   display: block;
   margin: 7em auto;
+  position: relative;
 }
 
-/* line 335, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 336, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion {
+  position: relative;
+  min-height: 50em;
+}
+
+/* line 340, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion .section {
+  position: relative;
+  display: block;
+  top: 0;
+  transition: all .2s;
+  -ms-transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+/* line 349, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion .section h3.title {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all .5s;
+  -ms-transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+/* line 358, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion .section p.info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+  opacity: 0;
+  transition: all .5s;
+  -ms-transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+/* line 369, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion #macbook {
+  top: 0;
+  z-index: 500;
+}
+
+/* line 373, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion #chassis {
+  top: -350px;
+  z-index: 400;
+}
+
+/* line 377, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion #flash {
+  top: -660px;
+  z-index: 300;
+}
+
+/* line 381, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion #dividerone {
+  width: 100%;
+  display: block;
+  height: 1px;
+  position: relative;
+  top: -1000px;
+}
+
+/* line 388, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+#index .seamless .explosion #dividertwo {
+  width: 100%;
+  display: block;
+  height: 1px;
+  position: relative;
+  top: -600px;
+}
+
+/* line 396, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .press {
   background: #f5f5f5;
   padding: 8em 0;
 }
 
-/* line 339, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 400, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .press h2 {
   color: #000;
   font-size: 2.75em;
@@ -418,23 +496,23 @@ header#header {
   font-family: 'Nota Sans', sans-serif;
 }
 
-/* line 347, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 408, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .press .images {
   text-align: center;
 }
 
-/* line 350, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 411, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .press img {
   display: inline-block;
   width: 20%;
 }
 
-/* line 354, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 415, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog {
   padding: 8em 0;
 }
 
-/* line 357, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 418, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog h2 {
   color: #000;
   font-size: 2.75em;
@@ -446,7 +524,7 @@ header#header {
   font-family: 'Nota Sans', sans-serif;
 }
 
-/* line 367, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 428, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog h3 {
   color: #444;
   font-size: 1.25em;
@@ -456,7 +534,7 @@ header#header {
   font-family: 'Nota Sans', sans-serif;
 }
 
-/* line 375, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 436, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog h4 {
   color: #888;
   font-style: italic;
@@ -467,7 +545,7 @@ header#header {
   font-family: 'Nota Sans', sans-serif;
 }
 
-/* line 384, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 445, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog p {
   color: #666;
   font-size: 1.25em;
@@ -477,25 +555,25 @@ header#header {
   text-align: left;
 }
 
-/* line 392, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 453, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .blog .profile {
   display: block;
   width: 100%;
 }
 
-/* line 397, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 458, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #index .mock {
   width: 100%;
   display: block;
 }
 
-/* line 402, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 463, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 footer#footer {
   background: #1c4075;
   padding: 6em 0 10em;
 }
 
-/* line 407, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 468, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info {
   border-top: 1px solid #ccc;
   padding-top: 1em;
@@ -503,12 +581,12 @@ footer#footer {
   padding-right: 0;
 }
 
-/* line 413, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 474, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info .logo {
   height: 3em;
 }
 
-/* line 416, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 477, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info .links {
   margin: 0;
   padding: 0;
@@ -516,18 +594,18 @@ footer#footer {
   list-style-type: none;
 }
 
-/* line 422, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 483, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info .links li {
   height: 3em;
   display: inline-block;
 }
 
-/* line 426, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 487, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info .links li:last-child a {
   padding-right: 0;
 }
 
-/* line 429, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 490, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 #footer .foot-info .links li a {
   height: 3em;
   line-height: 3em;
@@ -537,7 +615,7 @@ footer#footer {
 }
 
 /*    Slick Slider Stuffs     */
-/* line 444, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 505, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -554,7 +632,7 @@ footer#footer {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 465, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 526, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-list {
   position: relative;
   display: block;
@@ -563,18 +641,18 @@ footer#footer {
   padding: 0;
 }
 
-/* line 475, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 536, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-list:focus {
   outline: none;
 }
 
-/* line 479, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 540, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 485, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 546, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -584,7 +662,7 @@ footer#footer {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 495, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 556, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-track {
   position: relative;
   top: 0;
@@ -592,24 +670,24 @@ footer#footer {
   display: block;
 }
 
-/* line 503, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 564, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-track:before,
 .slick-track:after {
   display: table;
   content: '';
 }
 
-/* line 510, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 571, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-track:after {
   clear: both;
 }
 
-/* line 514, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 575, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-/* line 519, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 580, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slide {
   display: none;
   float: left;
@@ -617,37 +695,37 @@ footer#footer {
   min-height: 1px;
 }
 
-/* line 527, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 588, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 [dir='rtl'] .slick-slide {
   float: right;
 }
 
-/* line 531, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 592, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slide img {
   display: block;
 }
 
-/* line 535, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 596, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
 
-/* line 539, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 600, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-/* line 543, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 604, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
 
-/* line 547, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 608, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-/* line 551, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
+/* line 612, /Users/Bryan/Desktop/projects/tardisk/app/assets/stylesheets/main.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;

@@ -20,6 +20,15 @@
 
 $(document).ready(function(){
 
+	var exploding = false;
+	var scrollPos = 0;
+	var scrolldif = 0;
+	var scrollCurrent = 0;
+	var chassisScr = false;
+	var flashScr = false;
+	var chassis = document.getElementById('chassis');
+	var flash = document.getElementById('flash');
+
 	////////////   Smooth Scrolling
 
 	$('a[href*=#]:not([href=#])').click(function() {
@@ -33,6 +42,51 @@ $(document).ready(function(){
 		    return false;
 		  }
 		}
+	});
+
+	var waypoint = new Waypoint({
+		element: document.getElementById('seamless'),
+			handler: function(direction) {
+				scrollPos = getScrollTop();
+
+				if (direction == "down") {
+					chassisScr = true
+					flashScr = true
+					exploding = true
+				} else {
+					exploding = false
+				}
+			}
+	});
+	var waypoint2 = new Waypoint({
+		element: document.getElementById('dividerone'),
+			handler: function(direction) {
+
+				if (direction == "down") {
+					chassisScr = false
+					$(chassis).children(".title").css("opacity", "1")
+					$(chassis).children(".info").css("opacity", "1")
+				} else {
+					chassisScr = true
+					$(chassis).children(".title").css("opacity", "0")
+					$(chassis).children(".info").css("opacity", "0")
+				}
+			}
+	});
+	var waypoint2 = new Waypoint({
+		element: document.getElementById('dividertwo'),
+			handler: function(direction) {
+
+				if (direction == "down") {
+					flashScr = false
+					$(flash).children(".title").css("opacity", "1")
+					$(flash).children(".info").css("opacity", "1")
+				} else {
+					flashScr = true
+					$(flash).children(".title").css("opacity", "0")
+					$(flash).children(".info").css("opacity", "0")
+				}
+			}
 	});
 
 	function getScrollTop() {
@@ -50,16 +104,36 @@ $(document).ready(function(){
 		// IE in quirks mode
 		return document.body.scrollTop;
 	}
-	
-	window.onscroll = function() {
-		var box = document.getElementById('boxed'),
-		    scroll = getScrollTop();
 
-		if (scroll <= 28) {
-		  box.style.top = "30px";
+	window.onscroll = function() {
+
+		if (exploding == true) {
+		    scroll = getScrollTop();
+		    calculatescroll(scroll);
+		} else {
+
+		}
+	}
+
+	function calculatescroll(scroll) {
+		scrolldif = scroll - scrollPos
+	    console.log(scrolldif)
+
+		if (scrolldif <= 300) {
+			if (chassisScr == true) {
+		 		chassis.style.top = "-350px";
+		 	}
+		 	if (flashScr == true) {
+				flash.style.top = "-660px";
+			}
 		}
 		else {
-		  box.style.top = (scroll + 2) + "px";
+			if (chassisScr == true) {
+		  		chassis.style.top = (scrolldif - 650) + "px";
+		  	}
+		  	if (flashScr == true) {
+		  		flash.style.top = (scrolldif - 960) + "px";
+		  	}
 		}
 	};
 
