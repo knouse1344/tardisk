@@ -145,25 +145,65 @@ header#header {
 	border: 0;
 }
 
+#index .compatible {
+	padding-top: 8em;
+}
 #index .compatible-slider {
 	min-height: 30em;
-	padding-top: 5em;
+	position: relative;
+	width: 100%;
+}
+#index .compatible-slider div {
+	transition: all .25s;
+	-ms-transition: all .25s;
+	-moz-transition: all .25s;
+	-webkit-transition: all .25s;
+}
+#index .compatible-slider div img {
+	width: 100%;
+	opacity: 1;
+}
+#index .compatible-slider .active {
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+	opacity: 1;
+	z-index: 500;
+	top: 5em;
+}
+#index .compatible-slider .second {
+	position: absolute;
+	width: 15%;
+	left: 75%;
+	margin-left: -7.5%;
+	opacity: .4;
+	z-index: 200;
+	top: 2em;
+}
+#index .compatible-slider .third {
+	position: absolute;
+	width: 10%;
+	left: 50%;
+	margin-left: -5%;
+	opacity: .1;
+	z-index: 100;
+	top: 0;
+}
+#index .compatible-slider .fourth {
+	position: absolute;
+	width: 15%;
+	left: 25%;
+	margin-left: -7.5%;
+	opacity: .4;
+	z-index: 200;
+	top: 2em;
 }
 #index .compatible-slider .slick-slide {
 
 }
 #index .compatible-slider .slick-slide:focus {
 	outline: 0;
-}
-#index .compatible-slider img {
-	padding: 5em 0;
-	width: 60%;
-	margin: auto;
-	opacity: .35;
-	transition: all .2s;
-	-ms-transition: all .2s;
-	-moz-transition: all .2s;
-	-webkit-transition: all .2s;
 }
 #index .compatible-slider .slick-center img {
   opacity: 1;
@@ -196,8 +236,9 @@ header#header {
 	margin: 1.5em 0 5em;
 }
 #index .details {
-	background: #f5f5f5;
-	padding-top: 8em;
+	border-top: 1px solid #eee;
+	background: #fff;
+	padding-top: 4em;
 	padding-bottom: 8em;
 }
 #index .details .detail {
@@ -209,11 +250,24 @@ header#header {
 	width: 15em;
 	margin: 3em auto 0;
 }
+#index .details .stylish {
+	display: block;
+	width: 100%;
+}
+#index .details .remove {
+	display: block;
+	width: 100%;
+}
+#index .details .timemachine {
+	display: block;
+	width: 100%;
+}
 #index .details h2 {
 	color: #000;
 	font-size: 2.75em;
 	font-weight: 700;
 	text-align: left;
+	margin-top: 1.5em;
 	margin-bottom: .5em;
 	font-family: 'Nota Sans', sans-serif;
 }

@@ -19,10 +19,7 @@
 			<div class="col-sm-12">
 				<img class="logo" src="/assets/logo_light.png" />
 				<ul class="navlist">
-					<li><a href="#compatible">Compatible</a></li>
-					<li><a href="#details">Details</a></li>
-					<li><a href="#seamless">The Product</a></li>
-					<li><a href="#">Catalog</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> Buy Now</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,12 +37,10 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="compatible-slider">
-					<div><img src="/assets/macbook.jpg" /></div>
-					<div><img src="/assets/macbook.jpg" /></div>
-					<div><img src="/assets/macbook.jpg" /></div>
-					<div><img src="/assets/macbook.jpg" /></div>
-					<div><img src="/assets/macbook.jpg" /></div>
-					<div><img src="/assets/macbook.jpg" /></div>
+					<div class="active"><img src="/assets/mbair.png" /></div>
+					<div class="second"><img src="/assets/mbp15.png" /></div>
+					<div class="third"><img src="/assets/mbp13.png" /></div>
+					<div class="fourth"><img src="/assets/mbpcd.png" /></div>
 				</div>
 			</div>
 		</div>
@@ -58,12 +53,12 @@
 		</div>
 	</div>
 	<div id="details" class="details">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="detail row">
-				<div class="col-sm-5 col-sm-offset-1">
-					<img class="icon" src="/assets/details_icons1.jpg" />
-				</div>
 				<div class="col-sm-5">
+					<img class="stylish" src="/assets/stylish.jpg" />
+				</div>
+				<div class="col-sm-5 col-sm-offset-1">
 					<h2>Super Fast Flash Storage</h2>
 					<p>
 						TarDisk storage expansion cards for the MacBook Air and MacBook Pro. Just slide it into the SD slot on the side of your MacBook and instantly boost your storage capacity.<br><br>
@@ -71,10 +66,9 @@
 					</p>
 				</div>
 			</div>
+		</div>
+		<div class="container">
 			<div class="detail row">
-				<div class="col-sm-5 col-sm-offset-1">
-					<img class="icon" src="/assets/details_icons2.jpg" />
-				</div>
 				<div class="col-sm-5">
 					<h2>Safe and Secure</h2>
 					<p>
@@ -82,12 +76,15 @@
 						Just like the MacBook Pro, TarDisk is constructed from a solid aluminum uni-body frame.TarDisk's precision design seamlessly integrates into your MacBook and when necessary, can be removed with just a finger.
 					</p>
 				</div>
+				<div class="col-sm-5 col-sm-offset-2">
+					<img class="remove" src="/assets/removing.jpg" />
+				</div>
 			</div>
 			<div class="detail row">
-				<div class="col-sm-5 col-sm-offset-1">
-					<img class="icon" src="/assets/details_icons3.jpg" />
+				<div class="col-sm-4 col-sm-offset-1">
+					<img class="timemachine" src="/assets/timemachine.jpg" />
 				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-5 col-sm-offset-2">
 					<h2>A Time Machine Inside</h2>
 					<p>
 						TarDisk integrates with your MacBook's native Time Machine. Easily set up a daily back-up to run automatically while TarDisk is present.<br><br>
@@ -189,12 +186,21 @@
 	$(document).ready(function(){
 		var slider = $(".compatible-slider")
 
-		slider.slick({
-			centerMode: true,
-			centerPadding: '0px',
-			slidesToShow: 3,
-			arrows: false
+
+		$(".compatible-slider").on("click", function(){
+			$(".compatible-slider .active").addClass("transition")
+			$(".compatible-slider .second").removeClass("second").addClass("active")
+			$(".compatible-slider .third").removeClass("third").addClass("second")
+			$(".compatible-slider .fourth").removeClass("fourth").addClass("third")
+			$(".compatible-slider .transition").removeClass("transition active").addClass("fourth")
 		});
+
+		// slider.slick({
+		// 	centerMode: true,
+		// 	centerPadding: '0px',
+		// 	slidesToShow: 3,
+		// 	arrows: false
+		// });
 
 		console.log(window.devicePixelRatio);
 
