@@ -333,6 +333,9 @@ header#header {
 	margin: 7em auto;
 	position: relative;
 }
+#index .seamless #macbook img {
+	margin: 0;
+}
 #index .seamless .explosion {
 	position: relative;
 	min-height: 50em;
@@ -350,6 +353,9 @@ header#header {
 	position: absolute;
 	left: 0;
 	opacity: 0;
+	padding-top: 1.5em;
+	text-align: right;
+	z-index: 1000;
 	transition: all .5s;
 	-ms-transition: all .5s;
 	-moz-transition: all .5s;
@@ -361,6 +367,8 @@ header#header {
 	top: 0;
 	width: 25%;
 	opacity: 0;
+	padding-top: 2em;
+	z-index: 1000;
 	transition: all .5s;
 	-ms-transition: all .5s;
 	-moz-transition: all .5s;
@@ -371,26 +379,39 @@ header#header {
 	z-index: 500;
 }
 #index .seamless .explosion #chassis {
-	top: -350px;
+	top: -550px;
 	z-index: 400;
 }
+#index .seamless .explosion #chassis img {
+	width: 15em;
+}
+#index .seamless .explosion #plastic {
+	top: -835px;
+	z-index: 450;
+}
+#index .seamless .explosion #plastic img {
+	width: 15em;
+}
 #index .seamless .explosion #flash {
-	top: -660px;
+	top: -1100px;
 	z-index: 300;
+}
+#index .seamless .explosion #flash img {
+	width: 15em;
 }
 #index .seamless .explosion #dividerone {
 	width: 100%;
 	display: block;
 	height: 1px;
 	position: relative;
-	top: -1000px;
+	top: -1100px;
 }
 #index .seamless .explosion #dividertwo {
 	width: 100%;
 	display: block;
 	height: 1px;
 	position: relative;
-	top: -600px;
+	top: -900px;
 }
 
 #index .press {

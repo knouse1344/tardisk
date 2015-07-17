@@ -10873,7 +10873,9 @@ $(document).ready(function(){
 	var scrollCurrent = 0;
 	var chassisScr = false;
 	var flashScr = false;
+	var plasticScr = false;
 	var chassis = document.getElementById('chassis');
+	var plastic = document.getElementById('plastic');
 	var flash = document.getElementById('flash');
 
 	////////////   Smooth Scrolling
@@ -10900,13 +10902,15 @@ $(document).ready(function(){
 					chassisScr = true
 					flashScr = true
 					exploding = true
+					plasticScr = true
 				} else {
 					exploding = false
 				}
-			}
+			},
+			offset: 250
 	});
 	var waypoint2 = new Waypoint({
-		element: document.getElementById('dividerone'),
+		element: document.getElementById('macbook'),
 			handler: function(direction) {
 
 				if (direction == "down") {
@@ -10918,10 +10922,27 @@ $(document).ready(function(){
 					$(chassis).children(".title").css("opacity", "0")
 					$(chassis).children(".info").css("opacity", "0")
 				}
-			}
+			},
+			offset: -150
 	});
 	var waypoint2 = new Waypoint({
-		element: document.getElementById('dividertwo'),
+		element: document.getElementById('macbook'),
+			handler: function(direction) {
+
+				if (direction == "down") {
+					plasticScr = false
+					$(plastic).children(".title").css("opacity", "1")
+					$(plastic).children(".info").css("opacity", "1")
+				} else {
+					plasticScr = true
+					$(plastic).children(".title").css("opacity", "0")
+					$(plastic).children(".info").css("opacity", "0")
+				}
+			},
+			offset: -400
+	});
+	var waypoint3 = new Waypoint({
+		element: document.getElementById('macbook'),
 			handler: function(direction) {
 
 				if (direction == "down") {
@@ -10933,7 +10954,8 @@ $(document).ready(function(){
 					$(flash).children(".title").css("opacity", "0")
 					$(flash).children(".info").css("opacity", "0")
 				}
-			}
+			},
+			offset: -650
 	});
 
 	function getScrollTop() {
@@ -10966,20 +10988,18 @@ $(document).ready(function(){
 		scrolldif = scroll - scrollPos
 	    console.log(scrolldif)
 
-		if (scrolldif <= 300) {
-			if (chassisScr == true) {
-		 		chassis.style.top = "-350px";
-		 	}
-		 	if (flashScr == true) {
-				flash.style.top = "-660px";
-			}
+		if (scrolldif <= 100) {
+
 		}
 		else {
 			if (chassisScr == true) {
 		  		chassis.style.top = (scrolldif - 650) + "px";
 		  	}
+		  	if (plasticScr == true) {
+		  		plastic.style.top = (scrolldif - 935) + "px";
+		  	}
 		  	if (flashScr == true) {
-		  		flash.style.top = (scrolldif - 960) + "px";
+		  		flash.style.top = (scrolldif - 1200) + "px";
 		  	}
 		}
 	};
