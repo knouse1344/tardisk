@@ -21,6 +21,8 @@
 $(document).ready(function(){
 
 	var exploding = false;
+	var macOn = $("#macbook .on");
+	var macOff = $("#macbook .off");
 	var scrollPos = 0;
 	var scrolldif = 0;
 	var scrollCurrent = 0;
@@ -56,8 +58,10 @@ $(document).ready(function(){
 					flashScr = true
 					exploding = true
 					plasticScr = true
+					macOn.css("opacity", "1")
 				} else {
 					exploding = false
+					macOn.css("opacity", "0")
 				}
 			},
 			offset: 250
@@ -68,15 +72,15 @@ $(document).ready(function(){
 
 				if (direction == "down") {
 					chassisScr = false
-					$(chassis).children(".title").css("opacity", "1")
-					$(chassis).children(".info").css("opacity", "1")
+					$(chassis).addClass("locked")
+					$(chassis).addClass("locked")
 				} else {
 					chassisScr = true
-					$(chassis).children(".title").css("opacity", "0")
-					$(chassis).children(".info").css("opacity", "0")
+					$(chassis).removeClass("locked")
+					$(chassis).removeClass("locked")
 				}
 			},
-			offset: -150
+			offset: 200
 	});
 	var waypoint2 = new Waypoint({
 		element: document.getElementById('macbook'),
@@ -84,15 +88,15 @@ $(document).ready(function(){
 
 				if (direction == "down") {
 					plasticScr = false
-					$(plastic).children(".title").css("opacity", "1")
-					$(plastic).children(".info").css("opacity", "1")
+					$(plastic).addClass("locked")
+					$(plastic).addClass("locked")
 				} else {
 					plasticScr = true
-					$(plastic).children(".title").css("opacity", "0")
-					$(plastic).children(".info").css("opacity", "0")
+					$(plastic).removeClass("locked")
+					$(plastic).removeClass("locked")
 				}
 			},
-			offset: -400
+			offset: -100
 	});
 	var waypoint3 = new Waypoint({
 		element: document.getElementById('macbook'),
@@ -100,15 +104,15 @@ $(document).ready(function(){
 
 				if (direction == "down") {
 					flashScr = false
-					$(flash).children(".title").css("opacity", "1")
-					$(flash).children(".info").css("opacity", "1")
+					$(flash).addClass("locked")
+					$(flash).addClass("locked")
 				} else {
 					flashScr = true
-					$(flash).children(".title").css("opacity", "0")
-					$(flash).children(".info").css("opacity", "0")
+					$(flash).removeClass("locked")
+					$(flash).removeClass("locked")
 				}
 			},
-			offset: -650
+			offset: -400
 	});
 
 	function getScrollTop() {
@@ -146,13 +150,13 @@ $(document).ready(function(){
 		}
 		else {
 			if (chassisScr == true) {
-		  		chassis.style.top = (scrolldif - 650) + "px";
+		  		chassis.style.top = (scrolldif - 400) + "px";
 		  	}
 		  	if (plasticScr == true) {
-		  		plastic.style.top = (scrolldif - 935) + "px";
+		  		plastic.style.top = (scrolldif - 685) + "px";
 		  	}
 		  	if (flashScr == true) {
-		  		flash.style.top = (scrolldif - 1200) + "px";
+		  		flash.style.top = (scrolldif - 970) + "px";
 		  	}
 		}
 	};

@@ -50,7 +50,7 @@ header#header {
 	left: 0;
 	margin-top: -10em;
 	width: 100%;
-	background: #1c4075;
+	background: rgba(255,255,255,.9);
 	z-index: 50000;
 	transition: all .25s;
 	-ms-transition: all .25s;
@@ -87,8 +87,10 @@ header#header {
 	line-height: 3em;
 	height: 3em;
 	text-transform: uppercase;
+	background: #1c4075;
 	color: #fff;
-	font-weight: 700;
+	border-radius: .5em;
+	font-weight: 400;
 	text-decoration: none;
 }
 #secondary .navlist li a:hover {
@@ -122,16 +124,16 @@ header#header {
 }
 #index .banner h5 {
 	color: #fff;
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 400;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
 	line-height: 2em;
 	font-size: 1.5em;
 }
 #index .banner p {
 	color: #fff;
 	font-size: 1.5em;
-	font-weight: 400;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
 }
 #index .banner .buynow {
 	font-size: 1.5em;
@@ -145,6 +147,24 @@ header#header {
 	border: 0;
 }
 
+#index .introduction {
+	padding: 8em 0;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+#index .introduction p {
+	text-align: center;
+	font-size: 1.25em;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+}
+#index .introduction .photo {
+	display: inline-block;
+	width: 15em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	margin-bottom: 3em;
+}
 #index .compatible {
 	padding-top: 8em;
 }
@@ -256,7 +276,8 @@ header#header {
 	font-size: 1.25em;
 	margin-bottom: 1em;
 	line-height: 1.75em;
-	font-family: 'Nota Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
 	text-align: center;
 }
 #index .compatible .viewmore {
@@ -272,15 +293,18 @@ header#header {
 	padding-bottom: 8em;
 }
 #index .details .detail {
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: 8em;
+	padding-bottom: 8em;
+}
+#index .details .detail.stylish {
+	background: #f7f7f7;
 }
 #index .details .icon {
 	display: block;
 	width: 15em;
 	margin: 3em auto 0;
 }
-#index .details .stylish {
+#index .details .photo {
 	display: block;
 	width: 100%;
 }
@@ -306,7 +330,8 @@ header#header {
 	font-size: 1.25em;
 	margin-bottom: 1em;
 	line-height: 1.75em;
-	font-family: 'Nota Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
 	text-align: left;
 }
 #index .seamless {
@@ -325,7 +350,8 @@ header#header {
 	font-size: 1.25em;
 	margin-bottom: 1em;
 	line-height: 1.75em;
-	font-family: 'Nota Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
 	text-align: center;
 }
 #index .seamless img {
@@ -333,12 +359,34 @@ header#header {
 	margin: 7em auto;
 	position: relative;
 }
-#index .seamless #macbook img {
+#index .seamless #macbook {
+	position: relative;
+}
+#index .seamless #macbook .off {
 	margin: 0;
+	width: 100%;
+	display: block;
+	position: relative;
+	z-index: 5;
+}
+#index .seamless #macbook .on {
+	position: absolute;
+	display: block;
+	margin: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 100;
+	transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
 }
 #index .seamless .explosion {
 	position: relative;
 	min-height: 50em;
+	margin-top: 5em;
 }
 #index .seamless .explosion .section {
 	position: relative;
@@ -351,8 +399,10 @@ header#header {
 }
 #index .seamless .explosion .section h3.title {
 	position: absolute;
-	left: 0;
+	left: -1em;
 	opacity: 0;
+	font-weight: 700;
+	font-size: 2.5em;
 	padding-top: 1.5em;
 	text-align: right;
 	z-index: 1000;
@@ -363,37 +413,45 @@ header#header {
 }
 #index .seamless .explosion .section p.info {
 	position: absolute;
-	right: 0;
+	right: -4em;
 	top: 0;
 	width: 25%;
 	opacity: 0;
-	padding-top: 2em;
+	padding-top: 1em;
 	z-index: 1000;
 	transition: all .5s;
 	-ms-transition: all .5s;
 	-moz-transition: all .5s;
 	-webkit-transition: all .5s;
 }
+#index .seamless .explosion .section.locked h3.title {
+	opacity: 1;
+	left: .5em;
+}
+#index .seamless .explosion .section.locked p.info {
+	opacity: 1;
+	right: 0;
+}
 #index .seamless .explosion #macbook {
 	top: 0;
 	z-index: 500;
 }
 #index .seamless .explosion #chassis {
-	top: -550px;
+	top: -300px;
 	z-index: 400;
 }
 #index .seamless .explosion #chassis img {
 	width: 15em;
 }
 #index .seamless .explosion #plastic {
-	top: -835px;
+	top: -585px;
 	z-index: 450;
 }
 #index .seamless .explosion #plastic img {
 	width: 15em;
 }
 #index .seamless .explosion #flash {
-	top: -1100px;
+	top: -870px;
 	z-index: 300;
 }
 #index .seamless .explosion #flash img {
