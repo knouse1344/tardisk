@@ -75,7 +75,7 @@ header#header {
 	-moz-transition: all .25s;
 	-webkit-transition: all .25s;
 }
-#header .navlist li a.buy {
+#header.affix .navlist li a.buy {
 	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
 	padding: 0 1em;
@@ -83,10 +83,9 @@ header#header {
 	line-height: 3em;
 	height: 3em;
 	text-transform: uppercase;
-	background: #1c4075;
+	background: rgb(60, 126, 247);
 	color: #fff;
 	border-radius: .5em;
-	font-weight: 400;
 	text-decoration: none;
 }
 #header .navlist li a:hover {
@@ -163,7 +162,7 @@ header#header {
 	font-size: 1.5em;
 	padding: .5em 1.5em;
 	color: #fff;
-	background: orange;
+	background: rgb(60, 126, 247);
 	border-radius: .3em;
 	margin-top: 15em;
 	margin-bottom: 1em;
@@ -334,6 +333,7 @@ header#header {
 }
 #index .details .insertion {
 	text-align: right;
+	overflow: hidden;
 	padding-right: 0;
 }
 #index .details .remove {
@@ -457,7 +457,7 @@ header#header {
 	font-size: 2.75em;
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
-	padding-top: .25em;
+	padding-top: .5em;
 	text-align: center;
 	width: 33%;
 	z-index: 1000;
@@ -472,7 +472,7 @@ header#header {
 	top: 0;
 	width: 35%;
 	opacity: 0;
-	padding-top: 1em;
+	padding-top: 2em;
 	z-index: 1000;
 	transition: all .5s;
 	-ms-transition: all .5s;
