@@ -23,6 +23,8 @@ $(document).ready(function(){
 	var exploding = false;
 	var macOn = $("#macbook .on");
 	var macOff = $("#macbook .off");
+	var insertTardisk = $("#details .tardisk")
+	var insertMac = $("#details .mac")
 	var scrollPos = 0;
 	var scrolldif = 0;
 	var scrollCurrent = 0;
@@ -41,11 +43,27 @@ $(document).ready(function(){
 		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 		  if (target.length) {
 		    $('html,body').animate({
-		      scrollTop: target.offset().top - 50
+		      scrollTop: target.offset().top - 63
 		    }, 1000);
 		    return false;
 		  }
 		}
+	});
+
+	var insertWaypoint = new Waypoint({
+		element: document.getElementById('details'),
+			handler: function(direction) {
+
+				if (direction == "down") {
+					insertTardisk.css("margin-right", "0")
+					insertMac.css("margin-right", "-2.5em")
+				} else {
+					insertTardisk.css("margin-right", "-2.5em")
+					insertMac.css("margin-right", "0")
+				}
+				
+			},
+			offset: -200
 	});
 
 	var waypoint = new Waypoint({
