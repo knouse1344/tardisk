@@ -140,12 +140,18 @@ header#header {
 	font-weight: 700;
 	font-size: 3.25em;
 }
-#index .banner h5 {
+#index .banner a {
+	text-decoration: none;
+	display: block;
 	color: #fff;
+	margin-top: 1em;
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 	line-height: 2em;
-	font-size: 1.5em;
+	font-size: 1.25em;
+}
+#index .banner a:hover {
+	opacity: .5;
 }
 #index .banner p {
 	color: #fff;
@@ -372,6 +378,14 @@ header#header {
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 	text-align: left;
+}
+#index #divider {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#index #divider img {
+	width: 100%;
 }
 #index .seamless {
 	padding: 8em 0;
