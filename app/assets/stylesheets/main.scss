@@ -473,7 +473,7 @@ header#header {
 	padding-top: .5em;
 	text-align: center;
 	display: inline-block;
-	left: -2em;
+	padding-left: 0;
 	width: 33%;
 	z-index: 1000;
 	transition: all .5s;
@@ -499,7 +499,7 @@ header#header {
 }
 #index .seamless .explosion .section.locked h3.title {
 	opacity: 1;
-	left: .5em;
+	padding-left: 1em;
 }
 #index .seamless .explosion .section.locked p.info {
 	opacity: 1;

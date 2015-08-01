@@ -69,16 +69,10 @@ $(document).ready(function(){
 	var waypoint = new Waypoint({
 		element: document.getElementById('seamless'),
 			handler: function(direction) {
-				scrollPos = getScrollTop();
 
 				if (direction == "down") {
-					chassisScr = true
-					flashScr = true
-					exploding = true
-					plasticScr = true
 					macOn.css("opacity", "1")
 				} else {
-					exploding = false
 					macOn.css("opacity", "0")
 				}
 			},
@@ -133,21 +127,21 @@ $(document).ready(function(){
 	// 		offset: -300
 	// });
 
-	function getScrollTop() {
-		if (typeof window.pageYOffset !== 'undefined' ) {
-		// Most browsers
-		return window.pageYOffset;
-		}
+	// function getScrollTop() {
+	// 	if (typeof window.pageYOffset !== 'undefined' ) {
+	// 	// Most browsers
+	// 	return window.pageYOffset;
+	// 	}
 
-		var d = document.documentElement;
-		if (d.clientHeight) {
-		// IE in standards mode
-		return d.scrollTop;
-		}
+	// 	var d = document.documentElement;
+	// 	if (d.clientHeight) {
+	// 	// IE in standards mode
+	// 	return d.scrollTop;
+	// 	}
 
-		// IE in quirks mode
-		return document.body.scrollTop;
-	}
+	// 	// IE in quirks mode
+	// 	return document.body.scrollTop;
+	// }
 
 	// window.onscroll = function() {
 
