@@ -19,6 +19,7 @@ header#header {
 #header .logo-container {
 	position: relative;
 	display: inline-block;
+	text-decoration: none;
 }
 #header .logo {
 	height: 4em;
@@ -347,6 +348,7 @@ header#header {
 }
 #index .details .remove.mac {
 	z-index: 500;
+	margin-right: -3.65em;
 	transition: all 1s;
 	-ms-transition: all 1s;
 	-moz-transition: all 1s;
@@ -354,8 +356,7 @@ header#header {
 }
 #index .details .remove.tardisk {
 	z-index: 100;
-	margin-left: -.75em;
-	margin-right: -2.5em;
+	right: -2.5em;
 }
 #index .details .timemachine {
 	display: block;
@@ -388,7 +389,8 @@ header#header {
 	width: 100%;
 }
 #index .seamless {
-	padding: 8em 0;
+	padding: 0;
+	overflow: hidden;
 }
 #index .seamless h2 {
 	color: #000;
@@ -440,25 +442,38 @@ header#header {
 	position: relative;
 	min-height: 50em;
 	margin-top: 5em;
+	padding-bottom: 10em;
+}
+
+#index .seamless .explosion ol {
+	padding: 0;
+	margin: 0;
+
+	li {
+		position: relative;
+	}
 }
 #index .seamless .explosion .section {
 	position: relative;
 	display: block;
 	top: 0;
-	transition: all .2s;
-	-ms-transition: all .2s;
-	-moz-transition: all .2s;
-	-webkit-transition: all .2s;
+	margin-bottom: 5em;
+	min-height: 12em;
+	transition: all .05s ease-in-out;
+	-ms-transition: all .05s ease-in-out;
+	-moz-transition: all .05s ease-in-out;
+	-webkit-transition: all .05s ease-in-out;
 }
 #index .seamless .explosion .section h3.title {
-	position: absolute;
-	left: -1em;
+	position: relative;
 	opacity: 0;
 	font-size: 2.75em;
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 	padding-top: .5em;
 	text-align: center;
+	display: inline-block;
+	left: -2em;
 	width: 33%;
 	z-index: 1000;
 	transition: all .5s;
@@ -467,13 +482,16 @@ header#header {
 	-webkit-transition: all .5s;
 }
 #index .seamless .explosion .section p.info {
-	position: absolute;
-	right: -4em;
-	top: 0;
+	position: relative;
+	display: inline-block;
+	margin-left: 30%;
+	right: -2em;
 	width: 35%;
 	opacity: 0;
 	padding-top: 2em;
 	z-index: 1000;
+	font-size: 1em;
+	vertical-align: top;
 	transition: all .5s;
 	-ms-transition: all .5s;
 	-moz-transition: all .5s;
@@ -489,42 +507,37 @@ header#header {
 }
 #index .seamless .explosion #macbook {
 	top: 0;
-	z-index: 500;
+	z-index: 10000;
 }
-#index .seamless .explosion #chassis {
-	top: -300px;
-	z-index: 400;
+#index .seamless .explosion .chassis {
+	background: url('/assets/tardisk_chassis.png');
+	background-size: 15em auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 2000;
 }
 #index .seamless .explosion #chassis img {
 	width: 15em;
 }
-#index .seamless .explosion #plastic {
-	top: -585px;
-	z-index: 450;
+#index .seamless .explosion .plastic {
+	background: url('/assets/tardisk_plastic.png');
+	background-size: 15em auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 5000;
 }
 #index .seamless .explosion #plastic img {
 	width: 15em;
 }
-#index .seamless .explosion #flash {
-	top: -870px;
-	z-index: 300;
+#index .seamless .explosion .flash {
+	background: url('/assets/tardisk_guts.png');
+	background-size: 15em auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 4000;
 }
 #index .seamless .explosion #flash img {
 	width: 15em;
-}
-#index .seamless .explosion #dividerone {
-	width: 100%;
-	display: block;
-	height: 1px;
-	position: relative;
-	top: -1100px;
-}
-#index .seamless .explosion #dividertwo {
-	width: 100%;
-	display: block;
-	height: 1px;
-	position: relative;
-	top: -900px;
 }
 
 #index .press {
@@ -595,41 +608,72 @@ header#header {
 }
 
 footer#footer {
-	background: #333;
+	background: #111;
 	padding: 6em 0 10em;
 }
 
-#footer .foot-info {
-	border-top: 1px solid #ccc;
-	padding-top: 1em;
-	padding-left: 0;
-	padding-right: 0;
-}
-#footer .foot-info .logo {
-	height: 3em;
-}
-#footer .foot-info .links {
-	margin: 0;
-	padding: 0;
-	float: right;
-	list-style-type: none;
-}
-#footer .foot-info .links li {
-	height: 3em;
-	display: inline-block;
-}
-#footer .foot-info .links li:last-child a {
-	padding-right: 0;
-}
-#footer .foot-info .links li a {
-	height: 3em;
-	line-height: 3em;
+#footer h4 {
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid rgba(255,255,255,.3);
 	color: #fff;
-	padding-left: 1em;
-	padding-right: 1em;
+	margin-bottom: 1em;
 }
+#footer h5 {
+	display: block;
+	padding-bottom: .25em;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	color: #fff;
+}
+#footer .payment {
+	display: block;
+	width: 100%;
+}
+#footer h5.copyright {
+	display: block;
+	margin-top: 3em;
+	padding-top: .75em;
+	border-top: 1px solid rgba(255,255,255,.3);
+	font-weight: 300;
+	border-bottom: 0;
+	color: #fff;
+}
+#footer a {
+	display: block;
+	color: #fff;
+}
+#footer .compatibility {
+	display: block;
+	width: 65%;
+	margin: auto;
+}
+#footer .contact {
+	margin-bottom: 2em;
+}
+#footer .contact p {
+	color: #fff;
+}
+#footer .contact p span {
+	font-weight: bold;
+	color: #559afd;
+}
+#footer .social {
 
-
+}
+#footer .social a {
+	display: inline-block;
+	width: 2.5em;
+	margin-right: 1em;
+	border: 1px solid rgba(255,255,255,.1);
+	border-radius: 3em;
+}
+#footer .social a:hover {
+	border: 1px solid rgba(255,255,255,1);
+}
+#footer .social img {
+	display: block;
+	width: 100%;
+}
 
 
 
@@ -750,4 +794,22 @@ footer#footer {
     height: auto;
 
     border: 1px solid transparent;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+	.mobile-head {
+		display: block;
+	}
+
+	#index .introduction .photo {
+		width: 10em;
+	}
 }
