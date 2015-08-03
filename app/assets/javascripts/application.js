@@ -78,124 +78,15 @@ $(document).ready(function(){
 			},
 			offset: 275
 	});
-	// var waypoint2 = new Waypoint({
-	// 	element: document.getElementById('macbook'),
-	// 		handler: function(direction) {
-
-	// 			if (direction == "down") {
-	// 				chassisScr = false
-	// 				$(chassis).addClass("locked")
-	// 				$(chassis).addClass("locked")
-	// 			} else {
-	// 				chassisScr = true
-	// 				$(chassis).removeClass("locked")
-	// 				$(chassis).removeClass("locked")
-	// 			}
-	// 		},
-	// 		offset: 150
-	// });
-	// var waypoint2 = new Waypoint({
-	// 	element: document.getElementById('macbook'),
-	// 		handler: function(direction) {
-
-	// 			if (direction == "down") {
-	// 				plasticScr = false
-	// 				$(plastic).addClass("locked")
-	// 				$(plastic).addClass("locked")
-	// 			} else {
-	// 				plasticScr = true
-	// 				$(plastic).removeClass("locked")
-	// 				$(plastic).removeClass("locked")
-	// 			}
-	// 		},
-	// 		offset: -100
-	// });
-	// var waypoint3 = new Waypoint({
-	// 	element: document.getElementById('macbook'),
-	// 		handler: function(direction) {
-
-	// 			if (direction == "down") {
-	// 				flashScr = false
-	// 				$(flash).addClass("locked")
-	// 				$(flash).addClass("locked")
-	// 			} else {
-	// 				flashScr = true
-	// 				$(flash).removeClass("locked")
-	// 				$(flash).removeClass("locked")
-	// 			}
-	// 		},
-	// 		offset: -300
-	// });
-
-	// function getScrollTop() {
-	// 	if (typeof window.pageYOffset !== 'undefined' ) {
-	// 	// Most browsers
-	// 	return window.pageYOffset;
-	// 	}
-
-	// 	var d = document.documentElement;
-	// 	if (d.clientHeight) {
-	// 	// IE in standards mode
-	// 	return d.scrollTop;
-	// 	}
-
-	// 	// IE in quirks mode
-	// 	return document.body.scrollTop;
-	// }
-
-	// window.onscroll = function() {
-
-	// 	scroll = getScrollTop();
-	// 	calculatescroll(scroll);
-	// 	if (exploding == true) {
-		    
-	// 	} else {
-
-	// 	}
-	// }
-
-	// function calculatescroll(scroll) {
-	// 	scrolldif = scroll - scrollPos
-
-	// 	if (scrolldif <= 100) {
-
-	// 	}
-	// 	else {
-	// 		if (chassisScr == true) {
-	// 	  		chassis.style.top = (scrolldif - 400) + "px";
-	// 	  	}
-	// 	  	if (plasticScr == true) {
-	// 	  		plastic.style.top = (scrolldif - 685) + "px";
-	// 	  	}
-	// 	  	if (flashScr == true) {
-	// 	  		flash.style.top = (scrolldif - 970) + "px";
-	// 	  	}
-	// 	}
-	// };
 
 	var $win = $(window),
-        $pencil = $('.interactive-explosion'),
+        $explosion = $('.interactive-explosion'),
         $parts = null,
-        $pencilForm = $('.pencil-form-section'),
-        $pencilFrames = $pencilForm.find('.frame-list li'),
-        pencilY = 0,
+        explosionY = 0,
         isFirefox = navigator.userAgent.match(/Firefox/) !== null;
 
-    // Experiment to test which Amazon link leads to a higher conversion ratio
-    // Randomizing link to either point to graphite or walnut.
-    //
-    // NOTE: Modified to enable this experiment only if link matches US store
-    // shortcut link to walnut to avoid problems with international store links.
-    // Joe Bryan, sineLABS - 7/12/2014
 
-    // TODO: This needs to be fixed to work with international, randomly
-    // clobbering the link.
-    // $('.also-available').each(function(i, obj) {
-    //     if ($(this).attr("href") === "http://amzn.to/RWkOsB" && Math.random() > 0.5)
-    //         $(this).attr("href", "http://amzn.to/1gsJrIF");
-    // });
-
-    if ($('html').hasClass('no-touch')) {
+    if ($('#seamless').hasClass('seamless')) {
         $parts = setPartsData();
 
         var animationHandler = function() {
@@ -211,21 +102,12 @@ $(document).ready(function(){
         $win.resize(animationHandler);
     }
 
-    // fadeText()
-    // - $el: the jQuery element whose class will be toggled
-    //
-    // Toggle the 'fade-in' class based on the scroll position of the
-    // pencil section and the fade position of the pencil part.
     function fadeText($el) {
-        $el.toggleClass('locked', pencilY > $el.data('fade'));
+        $el.toggleClass('locked', explosionY > $el.data('fade'));
     }
 
-    // setPartsData()
-    //
-    // Finds the pencil parts, sets the data for each part, and returns
-    // the collection.
     function setPartsData() {
-        return $pencil.find('li').each(function() {
+        return $explosion.find('li').each(function() {
             var $part = $(this),
                 anim = $part.attr('data-anim').split('|');
 
@@ -239,30 +121,21 @@ $(document).ready(function(){
         });
     }
 
-    // movePart()
-    // - $el: the jQuery element that will be moved
-    //
-    // Adjust the CSS top property of the element that will be animated
-    // during scroll.
     function movePart($el) {
         var origin = $el.data('origin'),
             start = $el.data('start'),
-            y = (pencilY > start) ? origin + (pencilY - start) : origin;
+            y = (explosionY > start) ? origin + (explosionY - start) : origin;
 
         // special case for the sensor to ease with the battery
-        if (pencilY > 1548 && $el.data('isSensor')) {
+        if (explosionY > 1548 && $el.data('isSensor')) {
             y -= (1 - (1770 - pencilY) / 225) * 140;
         }
 
         $el.css('top', Math.min(0, y));
     }
 
-    // pencilPartsHandler()
-    //
-    // Calculate the pencil y value and move each part based on the scroll
-    // position of the browser window.
     function pencilPartsHandler() {
-        pencilY = -($pencil.offset().top - ($win.scrollTop() + $win.height()));
+        explosionY = -($explosion.offset().top - ($win.scrollTop() + $win.height()));
 
         $parts.each(function() {
             var $part = $(this);
